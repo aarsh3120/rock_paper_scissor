@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <div>
+      <div class="rectangle-1" id="scoreboard">
+        <p class="rock">Rock</p>
+        <p class="paper">Paper</p>
+        <p class="scissors">Scissors</p>
+        <div class="c-scorecard">
+          <p class="computer-score">
+            Computer Score <span id="computerScore">0</span>
+          </p>
+        </div>
+        <div class="u-scorecard">
+          <p class="your-score">Your Score <span id="playerScore">0</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="circle-buttons" id="game">
+        <div class="stn">
+          <button class="stone-btn" onclick="playerChoice('stone')">
+            <img
+              class="stone-img"
+              src="images/stone-icon.png"
+              alt="Stone Icon"
+            />
+          </button>
+        </div>
+        <div class="scis">
+          <button class="scissors-btn" onclick="playerChoice('scissors')">
+            <img
+              class="scissors-img"
+              src="images/scissors-icon.png"
+              alt="Scissors Icon"
+            />
+          </button>
+        </div>
+        <div class="ppr">
+          <button class="paper-btn" onclick="playerChoice('paper')">
+            <img
+              class="paper-img"
+              src="images/paper-icon.png"
+              alt="Paper Icon"
+            />
+          </button>
+        </div>
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+      </div>
+    </div>
+
+    <button class="rules" id="rulesButton" onclick="showRules()">Rules</button>
+    <div class="rule-box" id="box">
+      <button class="x" onclick="hideRules()">
+        <p>X</p>
+      </button>
+      <p class="game-rule-title">Game Rules</p>
+      <ul class="rule-lists">
+        <li class="r1">
+          Rock beats scissors, scissors beats paper, and paper beats rock.
+        </li>
+        <li class="r2">
+          Agree ahead of time whether you'll count off 'rock, paper, scissors,
+          shoot' or just 'rock, paper, scissors.'
+        </li>
+        <li class="r3">
+          Use rock, paper, scissors to settle minor decisions or simply play to
+          pass the time.
+        </li>
+        <li class="r4">
+          If both players lay down the same hand, each player lays down another
+          hand.
+        </li>
+      </ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
